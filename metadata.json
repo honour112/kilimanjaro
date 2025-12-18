@@ -1,0 +1,7 @@
+{
+  "name": "Kilimanjaro Stationary",
+  "description": "Modern E-commerce platform for high-quality printer ink and stationery needs in Tanzania.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
