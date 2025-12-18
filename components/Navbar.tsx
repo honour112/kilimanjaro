@@ -33,15 +33,15 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
-          <div className="flex-shrink-0 flex items-center cursor-pointer gap-3" onClick={() => setPage(Page.HOME)}>
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between h-16 sm:h-20 items-center">
+          <div className="flex-shrink-0 flex items-center cursor-pointer gap-2 sm:gap-3" onClick={() => setPage(Page.HOME)}>
             <img 
               src="https://i.postimg.cc/kG0pwSgQ/Whats-App-Image-2025-12-18-at-6-06-55-PM.jpg" 
               alt="Logo" 
-              className="h-12 w-12 rounded-full object-cover border-2 border-blue-600 shadow-sm"
+              className="h-10 sm:h-12 w-10 sm:w-12 rounded-full object-cover border-2 border-blue-600 shadow-sm"
             />
-            <span className="text-xl md:text-2xl font-extrabold brand-font bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent">
+            <span className="text-xs sm:text-sm md:text-lg lg:text-2xl font-extrabold brand-font bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent hidden xs:inline">
               Kilimanjaro Stationary
             </span>
           </div>
@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({
                     currentPage === item.value
                       ? 'text-blue-600 border-b-2 border-blue-600'
                       : 'text-gray-600 hover:text-blue-500'
-                  } px-1 py-2 text-sm font-semibold transition-colors`}
+                  } px-2 sm:px-3 md:px-4 py-2 text-xs sm:text-sm md:text-base font-semibold transition-colors whitespace-nowrap`}
                 >
                   {item.label}
                 </button>
@@ -69,9 +69,9 @@ const Navbar: React.FC<NavbarProps> = ({
               <button 
                 onClick={toggleLanguage}
                 title={t.changeLanguage}
-                className="bg-gray-50 hover:bg-blue-50 text-blue-700 px-4 py-2 rounded-xl text-xs font-bold border border-blue-100 transition-all flex items-center gap-2"
+                className="bg-gray-50 hover:bg-blue-50 text-blue-700 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-xs md:text-xs font-bold border border-blue-100 transition-all flex items-center gap-1.5 sm:gap-2 whitespace-nowrap"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 sm:w-4 h-3 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.19 15.378 5 18.625" />
                 </svg>
                 {t.langToggle}
@@ -79,9 +79,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
               <button 
                 onClick={onOpenCart}
-                className="relative p-2.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                className="relative p-1.5 sm:p-2.5 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg sm:rounded-xl transition-all"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 sm:w-6 h-5 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
                 {cartCount > 0 && (
@@ -93,25 +93,25 @@ const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          <div className="lg:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-2">
             <button 
               onClick={onOpenCart}
-              className="relative p-2 text-gray-600"
+              className="relative p-1.5 text-gray-600"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
               {cartCount > 0 && (
-                <span className="absolute top-0 right-0 bg-red-500 text-white text-[9px] font-black w-4 h-4 flex items-center justify-center rounded-full border border-white">
+                <span className="absolute top-0 right-0 bg-red-500 text-white text-[8px] font-black w-4 h-4 flex items-center justify-center rounded-full border border-white">
                   {cartCount}
                 </span>
               )}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+              className="inline-flex items-center justify-center p-1.5 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
             >
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -133,7 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   setPage(item.value);
                   setIsOpen(false);
                 }}
-                className={`block w-full text-left px-3 py-3 rounded-md text-base font-bold ${
+                className={`block w-full text-left px-3 py-2 sm:py-3 rounded-md text-sm sm:text-base font-bold ${
                   currentPage === item.value ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
                 }`}
               >
@@ -146,9 +146,9 @@ const Navbar: React.FC<NavbarProps> = ({
                 setIsOpen(false);
               }}
               title={t.changeLanguage}
-              className="w-full text-left px-3 py-3 text-base font-bold text-gray-500 border-t flex items-center gap-2"
+              className="w-full text-left px-3 py-2 sm:py-3 text-sm sm:text-base font-bold text-gray-500 border-t flex items-center gap-2"
             >
-              <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 sm:w-5 h-4 sm:h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.19 15.378 5 18.625" />
               </svg>
               {t.langToggle}
