@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'double-a-ream-standard',
-    name: { sw: 'Karatasi za Double A (Ream Moja)', en: 'Double A Paper (Single Ream)' },
+    name: { sw: 'Karatasi za Double A (Ream Moja)', en: 'ink(high Quality )' },
     price: 15000,
     description: { sw: 'Karatasi 500 za ubora wa juu (80gsm) kwa ajili ya ofisi au matumizi ya nyumbani.', en: '500 sheets of high-quality paper (80gsm) for office or home use.' },
     image: 'https://i.postimg.cc/kXYCNRn7/Whats-App-Image-2025-12-18-at-6-07-02-PM.jpg',

@@ -31,7 +31,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
     <div className="fixed inset-0 z-[100] overflow-hidden">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div className="absolute inset-y-0 right-0 max-w-full flex">
-        <div className="w-screen max-w-md bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
+      <div className="w-screen md:max-w-md drawer-full-mobile bg-white shadow-2xl flex flex-col animate-in slide-in-from-right duration-300">
           <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-blue-600 text-white">
             <h2 className="text-xl font-bold">{t.cartTitle}</h2>
             <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-full transition-colors">

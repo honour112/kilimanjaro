@@ -13,11 +13,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, language, onAddToCar
   const t = translations[language];
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group flex flex-col h-full">
-      <div className="relative h-64 overflow-hidden bg-gray-50 p-4">
+      <div className="relative h-48 md:h-64 overflow-hidden bg-gray-50 p-4">
         <img 
           src={product.image} 
           alt={product.name[language]}
-          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 responsive-img"
         />
         <div className="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
           TSh {product.price.toLocaleString()}

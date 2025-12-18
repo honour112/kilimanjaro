@@ -1,0 +1,51 @@
+/* Global styles and responsive helpers */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+
+  /* Ensure smoother text rendering on small devices */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Make images and videos responsive by default */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Slightly larger tap targets on mobile */
+.touch-friendly {
+  touch-action: manipulation;
+}
+
+/* Custom scrollbar for cart lists */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.08);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Improve layout on very small screens */
+@media (max-width: 420px) {
+  .px-responsive { padding-left: 1rem; padding-right: 1rem; }
+  .py-responsive { padding-top: 1rem; padding-bottom: 1rem; }
+  .hero-title-sm { line-height: 1.05; }
+}
+
+/* Utility to ensure drawer uses full width on small screens */
+.drawer-full-mobile {
+  width: 100vw;
+  max-width: 100vw;
+}
